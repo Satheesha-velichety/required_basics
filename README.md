@@ -184,3 +184,31 @@ print("Hello, World!".center(19,'0')) 	#Converts string into lower case
 print("apples, apple ".count("apple",0,20))  #count the repeating string inside the string
 
 
+################################################################################################################################################################
+#dataframe methods
+shape
+head/tail
+describe
+info
+columns
+values
+dtypes
+unique 
+display
+max--
+min --
+mean
+sort_values
+astype
+in, isin, tilde, = , & , | ...
+.str.lower(), lower, higher, casefols, title, swapcase etc..
+replace (dict)
+.isna().any() or sum()
+dropna( subset, how, thresh)
+fillna(value, inplace )
+value_counts()
+drop_duplicates(subset, keep,inplace)
+pd.to_datetime(column).dt.strftime
+lambda x : ' '.join(x)
+.groupby.sum()
+.groupby(column list).agg(agg-methods)
