@@ -2,25 +2,25 @@
 ################################################################################################################################################################
 ################################################################################################################################################################
 import pandas as pd
-# Read the JSON file into a DataFrame
+#Read the JSON file into a DataFrame
 df = pd.read_json('data/json_basic.json')
 
-# Display the DataFrame
+#Display the DataFrame
 print("Original DataFrame:")
 print(df)
 
-# Drop the 'id' column
+#Drop the 'id' column
 df.drop(columns=['id'], inplace=True)
 
-# Convert 'age' and 'salary' columns to numeric
+#Convert 'age' and 'salary' columns to numeric
 df['age'] = pd.to_numeric(df['age'], errors='coerce')
 df['salary'] = pd.to_numeric(df['salary'], errors='coerce')
 
-# Drop rows with missing values
+#Drop rows with missing values
 df.dropna(inplace=True)
 df.drop_duplicates(inplace=True)
 
-# Display the cleaned DataFrame
+#Display the cleaned DataFrame
 print("\nCleaned DataFrame:")
 print(df)
 
@@ -81,7 +81,7 @@ import pandas as pd
 import numpy as np 
 
 
-# Read the JSON file into a DataFrame
+#Read the JSON file into a DataFrame
 df = pd.read_json('data/multi_record_json.json')
 print(df)
 
@@ -116,7 +116,7 @@ print(sorted_df)
 
 
 #with open('data/multi_record_json.json') as file:
-#    json_data=json
+#  json_data=json
 ################################################################################################################################################################
 unittest
 
@@ -151,7 +151,7 @@ class TestStringMethods(unittest.TestCase):
     def test_split(self):
         s = 'hello world'
         self.assertEqual(s.split(), ['hello', 'world'])
-        # check that s.split fails when the separator is not a string
+        #check that s.split fails when the separator is not a string
         with self.assertRaises(TypeError):
             s.split(2)
         
